@@ -7,23 +7,40 @@
 body {
   font-family: "Poppins", sans-serif;
   background-color: #f8f9fa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
 }
 
-.card {
-  width: 300px;
-  border-radius: 8px;
-  box-sizing: 0 4px 6px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease;
+.your-class .slick-arrow {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  z-index: 1;
+  border: none;
+  font-size: 0;
+  background: red;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
 }
-.card:hover {
-  transform: translateY(-10px);
+.your-class .slick-arrow:hover {
+  transform: translateY(-50%) scale(1.1);
 }
-.card-img-top {
+.your-class .slick-arrow:before {
+  content: "&";
+  display: block;
+  width: 100%;
+  height: 100%;
+  font-size: 25px;
+}
+.your-class .slick-arrow.slick-next {
+  right: 0;
+  left: auto;
+}
+
+.slide {
+  padding-inline: 10px;
+}
+.slide .card img {
   width: 100%;
   height: auto;
   display: block;
